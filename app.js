@@ -344,10 +344,10 @@ mongoose.connect(process.env.DB_CONNECTION,{useNewUrlParser:true,useUnifiedTopol
 const port = process.env.PORT || process.env.LOCALPORT;
 const host = process.env.LOCALHOST;
 // For Heroku
-app.listen(process.env.PORT,()=> {
-    console.log("Server up and running port");
-});
-// For Localhost
-// app.listen(port,host,()=> {
+// app.listen(process.env.PORT,()=> {
 //     console.log("Server up and running port");
 // });
+// For Localhost
+app.listen(port,host,()=> {
+    console.log("Server up and running port");
+});
